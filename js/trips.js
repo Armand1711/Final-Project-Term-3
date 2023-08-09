@@ -1,24 +1,57 @@
 // js/trips.js
 
-$(document).ready(function() {
-  $(".add-to-checkout").click(function() {
-    const maxTrips = 3;
-    const tripContainer = $(this).closest(".trip");
-    const tripDescription = tripContainer.find("h2").text();
+const maxTripsAllowed = 3; // Maximum number of trips allowed in the checkout
 
-    if ($(".selected-trip").length < maxTrips) {
-      tripContainer.addClass("selected-trip");
-      $(this).text("Added to Checkout").prop("disabled", true);
+let selectedTrips = [];
 
-      
-      const selectedTrips = JSON.parse(localStorage.getItem("selectedTrips")) || [];
-      selectedTrips.push(tripDescription);
-      localStorage.setItem("selectedTrips", JSON.stringify(selectedTrips));
-    } else {
-      alert("You have reached the maximum number of booked trips (3).");
-    }
+function isTripSelected(card) {
+  return selectedTrips.some((trip) => trip.dataset.tripId === card.dataset.tripId);
+}
+
+function addToCheckout(card) {
+  if (selectedTrips.length >= maxTripsAllowed) {
+    alert('You can only select up to three trips.');
+    return;
+  }
+
+  if (isTripSelected(card)) {
+    alert('This trip is already selected.');
+    return;
+  }
+
+  const tripClone = card.cloneNode(true);
+  tripClone.classList.remove('trip');
+  tripClone.classList.add('checkout-trip');
+  tripClone.querySelector('.trip-overlay').remove(); // Remove overlay from cloned card
+
+  const checkoutTrips = document.querySelector('.checkout-trips');
+  checkoutTrips.appendChild(tripClone);
+
+  selectedTrips.push(tripClone);
+
+  updateCheckoutButton();
+}
+
+function updateCheckoutButton() {
+  const checkoutButton = document.querySelector('.checkout-button');
+  if (selectedTrips.length > 0) {
+    checkoutButton.removeAttribute('disabled');
+  } else {
+    checkoutButton.setAttribute('disabled', 'disabled');
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const tripCards = document.querySelectorAll('.trip');
+
+  tripCards.forEach((card) => {
+    card.addEventListener('click', () => {
+      addToCheckout(card);
+    });
   });
 });
+
+
 
 $(document).ready(function() {
   $(".image-wrapper img").click(function() {

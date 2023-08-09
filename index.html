@@ -12,7 +12,7 @@
 
   <!-- Style Sheets -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   <link rel="stylesheet" href="styles/styles.css">
 
 </head>
@@ -28,6 +28,42 @@
         </div>
       </nav>
 
+  
+
+      <div class="carousel">
+        <div class="carousel-slide">
+          <img src="assets/carousel image 1.png" alt="Image 1">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="assets/carousel image 2.jpg" alt="Image 2">
+        </div>
+
+        <div class="carousel-slide">
+            <img src="assets/carousel image 3.jpg" alt="Image 3">
+          </div>
+
+          <div class="carousel-slide">
+            <img src="assets/carousel image 4.jpg" alt="Image 4">
+          </div>
+
+          <div class="carousel-slide">
+            <img src="assets/carousel image 5.jpg" alt="Image 5">
+          </div>
+
+          <div class="carousel-slide">
+            <img src="assets/carousel image 6.jpg" alt="Image 6">
+          </div>
+
+          <div class="carousel-slide">
+            <img src="assets/carousel image 7.jpg" alt="Image 7">
+          </div>
+        
+            <a class="carousel-arrow prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="carousel-arrow next" onclick="changeSlide(1)">&#10095;</a>
+
+      </div>
+
       <section class="about-us">
         <div class="container">
           <h2>About Us</h2>
@@ -36,42 +72,6 @@
           <p>At AquaticNautica, we believe that every dive is a journey of discovery. Immerse yourself in vibrant coral reefs, encounter fascinating marine life, and create memories that will last a lifetime. Join us on a dive adventure and let the wonders of the underwater world captivate your senses.</p>
         </div>
       </section>
-
-      <div class="carousel">
-        <div class="carousel-slide">
-          <img src="assets/carousel image 1.png" alt="Image 1">
-        </div>
-
-        <div class="carousel-slide">
-          <img src="assets/carousel image 2.png" alt="Image 2">
-        </div>
-
-        <div class="carousel-slide">
-            <img src="assets/carousel image 3.png" alt="Image 3">
-          </div>
-
-          <div class="carousel-slide">
-            <img src="assets/carousel image 4.png" alt="Image 4">
-          </div>
-
-          <div class="carousel-slide">
-            <img src="assets/carousel image 5.png" alt="Image 5">
-          </div>
-
-          <div class="carousel-slide">
-            <img src="assets/carousel image 6.png" alt="Image 6">
-          </div>
-
-          <div class="carousel-slide">
-            <img src="assets/carousel image 7.png" alt="Image 7">
-          </div>
-        
-            <a class="carousel-arrow prev" onclick="changeSlide(-1)">&#10094;</a>
-            <a class="carousel-arrow next" onclick="changeSlide(1)">&#10095;</a>
-
-      </div>
-
-
 
       <section class="history">
         <div class="container">
@@ -89,76 +89,58 @@
 <section class="accordion-section">
   <div class="container">
     <h2>Frequently Asked Questions</h2>
-    <div class="accordion">
+    <div class="accordion" id="accordionExample">
       <div class="accordion-item">
-        <div class="accordion-header">What is scuba diving?</div>
-        <div class="accordion-content">
-          Scuba diving is a form of underwater diving where divers use a self-contained underwater breathing apparatus to breathe underwater. It allows you to explore the underwater world and observe marine life up close.
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            What is scuba diving?
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            Scuba diving is a form of underwater diving where divers use a self-contained underwater breathing apparatus to breathe underwater. It allows you to explore the underwater world and observe marine life up close.
+          </div>
         </div>
       </div>
       <div class="accordion-item">
-        <div class="accordion-header">Do I need previous diving experience?</div>
-        <div class="accordion-content">
-          No, you don't need previous diving experience. We offer diving trips suitable for both beginners and experienced divers. Our trained instructors will ensure your safety and provide guidance throughout the experience.
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Do I need previous diving experience?
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            No, you don't need previous diving experience. We offer diving trips suitable for both beginners and experienced divers. Our trained instructors will ensure your safety and provide guidance throughout the experience.
+          </div>
         </div>
       </div>
       <div class="accordion-item">
-        <div class="accordion-header">What should I bring for a diving trip?</div>
-        <div class="accordion-content">
-          You should bring your swimsuit, a towel, and any personal items you might need. We provide all the necessary scuba diving equipment, including masks, fins, tanks, and wetsuits.
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            What should I bring for a diving trip?
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            You should bring your swimsuit, a towel, and any personal items you might need. We provide all the necessary scuba diving equipment, including masks, fins, tanks, and wetsuits.
+          </div>
         </div>
       </div>
       <div class="accordion-item">
-        <div class="accordion-header">Is scuba diving safe?</div>
-        <div class="accordion-content">
-          Yes, scuba diving is generally safe when conducted under proper supervision and following safety guidelines. Our experienced instructors will ensure your safety and provide thorough briefings before each dive.
+        <h2 class="accordion-header" id="headingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            Is scuba diving safe?
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            Yes, scuba diving is generally safe when conducted under proper supervision and following safety guidelines. Our experienced instructors will ensure your safety and provide thorough briefings before each dive.
+          </div>
         </div>
+      </div>
     </div>
   </div>
 </section>
-
-<div class="accordion" id="accordionExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        Accordion Item #1
-      </button>
-    </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingTwo">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        Accordion Item #2
-      </button>
-    </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingThree">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        Accordion Item #3
-      </button>
-    </h2>
-    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
 
 
   <footer class="footer">

@@ -1,7 +1,7 @@
-// checkout.js
+// js/checkout.js
 
 $(document).ready(function() {
-    function goToHome() {
+    function goToHome(this) {
       window.location.href = "trips.html";
     }
   

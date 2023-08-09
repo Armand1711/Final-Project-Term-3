@@ -1,3 +1,5 @@
+//  js/home.js
+
 // carousel
 let slideIndex = 0;
 showSlides(slideIndex);
@@ -19,7 +21,16 @@ function changeSlide(n) {
   showSlides(slideIndex += n);
 }
 
+function startCarousel() {
+  setInterval(() => {
+    changeSlide(1);
+  }, 3000);
+}
+
+startCarousel();
+
 // accordion
+
 $(document).ready(function() {
   $(".accordion-header").click(function() {
     $(this).toggleClass("active");
