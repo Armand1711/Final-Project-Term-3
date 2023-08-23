@@ -28,8 +28,19 @@
         </div>
       </nav>
   <h1>Choose Your Dive Trips</h1>
-  <div class="trip-container">
 
+  <div class="filter-container">
+    <button class="filter-button" data-category="All">All Destinations</button>
+    <button class="filter-button" data-category="Short">Short Duration</button>
+    <button class="filter-button" data-category="Long">Long Duration</button>
+    <button class="filter-button" data-category="Single">Single Destination</button>
+    <button class="filter-button" data-category="Multi">Multi Destinations</button>
+    <button class="filter-button" data-category="Round">Round Trips</button>
+    <button class="filter-button" data-category="RowBoat">Row Boat Special</button>
+  </div>
+  
+
+  <div class="trip-container">
     <div class="trip" data-trip-id="1" onclick="addToCheckout(this)">
       <div class="trip-content">
         <img src="assets/trip 1.jpg" alt="Trip Image 1">

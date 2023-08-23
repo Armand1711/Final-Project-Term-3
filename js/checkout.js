@@ -1,17 +1,11 @@
-// js/checkout.js
+document.addEventListener('DOMContentLoaded', () => {
+  const checkoutTrips = document.querySelector('.checkout-trips');
 
-$(document).ready(function() {
-    function goToHome(this) {
-      window.location.href = "trips.html";
-    }
-  
-    const checkoutTrips = $(".checkout-trips");
-    const selectedTrips = JSON.parse(localStorage.getItem("selectedTrips")) || [];
-  
-    if (selectedTrips.length > 0) {
-      const tripsList = selectedTrips.map(trip => `<p>${trip}</p>`).join("");
-      checkoutTrips.html(`<p class="checkout-alert">Selected Trips:</p>${tripsList}`);
-    } else {
-      checkoutTrips.html(`<p class="checkout-alert">No trips selected.</p>`);
-    }
+  // Retrieve selected trips from local storage
+  const selectedTrips = JSON.parse(localStorage.getItem('selectedTrips')) || [];
+
+  // Append selected trip to the checkout list
+  selectedTrips.forEach((tripClone) => {
+    checkoutTrips.appendChild(tripClone);
   });
+});
