@@ -6,229 +6,617 @@
     <link rel="stylesheet" href="styles.css">
     <title>Scuba Diving Adventures</title>
 
-    
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,900;1,100&family=Nunito:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,900;1,100&family=Nunito:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
 
     <!-- Style Sheets -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles/styles.css">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="logo">
-          <img src="assets/Logo.png" alt="Logo">
+            <img src="assets/Logo.png" alt="Logo">
         </div>
         <div class="nav-links">
-          <a href="index.html" class="nav-button">Home</a>
-          <a href="trips.html" class="nav-button selected">Trips</a>
-          <a href="checkout.html" class="nav-button">Checkout</a>
+            <a href="index.html" class="nav-button">Home</a>
+            <a href="trips.html" class="nav-button selected">Trips</a>
+            <a href="checkout.html" class="nav-button">Checkout</a>
         </div>
-      </nav>
-  <h1>Choose Your Dive Trips</h1>
+    </nav>
+    <h1>Choose Your Dive Trips</h1>
 
-  <div class="filter-container">
-    <button class="filter-button" data-category="All">All Destinations</button>
-    <button class="filter-button" data-category="Short">Short Duration</button>
-    <button class="filter-button" data-category="Long">Long Duration</button>
-    <button class="filter-button" data-category="Single">Single Destination</button>
-    <button class="filter-button" data-category="Multi">Multi Destinations</button>
-    <button class="filter-button" data-category="Round">Round Trips</button>
-    <button class="filter-button" data-category="RowBoat">Row Boat Special</button>
+    <div class="filter-container">
+        <button class="filter-button" data-category="All">All Destinations</button>
+        <button class="filter-button" data-category="Short">Short Duration</button>
+        <button class="filter-button" data-category="Long">Long Duration</button>
+        <button class="filter-button" data-category="Single">Single Destination</button>
+        <button class="filter-button" data-category="Multi">Multi Destinations</button>
+        <button class="filter-button" data-category="Round">Round Trips</button>
+        <button class="filter-button" data-category="RowBoat">Row Boat Special</button>
+    </div>
+
+    <div class="trip-container">
+      
+      <!-- Trip Card 1 -->
+<div class="trip" data-trip-id="1" data-city="Miami" data-trip-code="TRP001">
+  <!-- Trip Images (Clickable) -->
+  <div class="trip-images">
+    <img src="assets/question.png" alt="Icon 1" class="weather-button" data-trip-id="1">
   </div>
+
+  <!-- Trip Content -->
+  <div class="trip-content">
+    <img src="assets/trip 1.jpg" alt="Trip Image 1">
+    <h2>Caribbean Coral Expedition</h2>
+  </div>
+
+  <!-- Trip Overlay -->
+  <div class="trip-overlay">
+    <button class="purchase-button" data-trip-id="1">Purchase Ticket</button>
+    <label for="ticket-quantity-1">Tickets:</label>
+    <select id="ticket-quantity-1" class="ticket-quantity" data-trip-id="1">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+  </div>
+
+  <!-- Weather Popup -->
+  <div id="weather-container-1" class="weather-container">
+    <h3>Weather Information</h3>
+    <div id="weather-info-1"></div>
+</div>
+
+  <button class="accordion-button" data-trip-id="1">Trip Details</button>
+  <!-- Trip Details HTML -->
+  <div id="trip-details-1" class="trip-details">
+    <h3>Trip Details</h3>
+    <p><strong>Destination:</strong> Caribbean Coral Expedition</p>
+    <p><strong>Duration:</strong> 7 Days</p>
+    <p><strong>Difficulty:</strong> Intermediate</p>
+    <p class="trip-cost-1"><strong>Price:</strong> R27,000</p>
+    <p><strong>Description:</strong> Dive into the vibrant and colorful world of the Caribbean's coral reefs. Embark on an expedition where you'll encounter a dazzling array of marine life, from playful tropical fish to majestic sea turtles. Explore hidden coves and swim alongside the coral formations that make this region a scuba diver's paradise.</p>
+</div>
+</div>
+
+<!-- Trip Card 2 -->
+<div class="trip" data-trip-id="2" data-city="Honolulu" data-trip-code="TRP002">
+  <!-- Trip Images (Clickable) -->
+  <div class="trip-images">
+    <img src="assets/question.png" alt="Icon 2" class="weather-button" data-trip-id="2">
+  </div>
+
+  <!-- Trip Content -->
+  <div class="trip-content">
+    <img src="assets/trip 2.jpg" alt="Trip Image 2">
+    <h2>Tropical Paradise Dive</h2>
+  </div>
+
+  <!-- Trip Overlay -->
+  <div class="trip-overlay">
+    <button class="purchase-button" data-trip-id="2">Purchase Ticket</button>
+    <label for="ticket-quantity-2">Tickets:</label>
+    <select id="ticket-quantity-2" class="ticket-quantity" data-trip-id="2">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+  </div>
+
+  <!-- Weather Popup -->
+  <div id="weather-container-2" class="weather-container">
+    <h3>Weather Information</h3>
+    <div id="weather-info-2"></div>
+</div>
+
+  <button class="accordion-button" data-trip-id="2">Trip Details</button>
+  <!-- Trip Details HTML -->
+
+  <div id="trip-details-2" class="trip-details">
+    <h3>Trip Details</h3>
+    <p><strong>Destination:</strong> Tropical Paradise Dive</p>
+      <p><strong>Duration:</strong> 5 Days</p>
+      <p><strong>Difficulty:</strong> Beginner</p>
+      <p class="trip-cost-2"><strong>Price:</strong> R21,600</p>
+      <p><strong>Description:</strong> Immerse yourself in the tranquil waters of a tropical paradise. Drift through crystal-clear seas and gaze upon breathtaking underwater landscapes. Discover unique species that call this paradise home, from graceful manta rays to intriguing octopuses. Experience the magic of diving in a setting straight out of a dream.</p>
+</div>
+</div>
+
+<!-- Trip Card 3 -->
+<div class="trip" data-trip-id="3" data-city="Maldives" data-trip-code="TRP003">
+  <!-- Trip Images (Clickable) -->
+  <div class="trip-images">
+    <img src="assets/question.png" alt="Icon 3" class="weather-button" data-trip-id="3">
+  </div>
+
+  <!-- Trip Content -->
+  <div class="trip-content">
+    <img src="assets/trip 3.jpg" alt="Trip Image 3">
+    <h2>Sunken Shipwrecks Adventure</h2>
+  </div>
+
+  <!-- Trip Overlay -->
+  <div class="trip-overlay">
+    <button class="purchase-button" data-trip-id="3">Purchase Ticket</button>
+    <label for="ticket-quantity-3">Tickets:</label>
+    <select id="ticket-quantity-3" class="ticket-quantity" data-trip-id="3">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+  </div>
+
+  <!-- Weather Popup -->
+  <div id="weather-container-3" class="weather-container">
+    <h3>Weather Information</h3>
+    <div id="weather-info-3"></div>
+</div>
+
+  <button class="accordion-button" data-trip-id="3">Trip Details</button>
+  <!-- Trip Details HTML -->
+
+  <div id="trip-details-3" class="trip-details">
+    <h3>Trip Details</h3>
+    <p><strong>Destination:</strong> Sunken Shipwrecks Adventure</p>
+        <p><strong>Duration:</strong> 6 Days</p>
+        <p><strong>Difficulty:</strong> Advanced</p>
+        <p class="trip-cost-3"><strong>Price:</strong> R31,800</p>
+        <p><strong>Description:</strong> Embark on an adventure to explore sunken shipwrecks that tell tales of maritime history. Navigate through the remains of vessels from bygone eras, now teeming with marine life. Witness the symbiotic relationship between nature and history as you dive into the heart of these captivating underwater time capsules.</p>  
+</div>
+</div>
+
+<!-- Trip Card 4 -->
+<div class="trip" data-trip-id="4" data-city="Bali" data-trip-code="TRP004">
+  <!-- Trip Images (Clickable) -->
+  <div class="trip-images">
+    <img src="assets/question.png" alt="Icon 4" class="weather-button" data-trip-id="4">
+  </div>
+
+  <!-- Trip Content -->
+  <div class="trip-content">
+    <img src="assets/trip 4.jpg" alt="Trip Image 4">
+    <h2>Aqua Explorers Getaway</h2>
+  </div>
+
+  <!-- Trip Overlay -->
+  <div class="trip-overlay">
+    <button class="purchase-button" data-trip-id="4">Purchase Ticket</button>
+    <label for="ticket-quantity-4">Tickets:</label>
+    <select id="ticket-quantity-4" class="ticket-quantity" data-trip-id="4">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+  </div>
+
+  <!-- Weather Popup -->
+  <div id="weather-container-4" class="weather-container">
+    <h3>Weather Information</h3>
+    <div id="weather-info-4"></div>
+</div>
+
+  <button class="accordion-button" data-trip-id="4">Trip Details</button>
+  <!-- Trip Details HTML -->
+
+  <div id="trip-details-4" class="trip-details">
+    <h3>Trip Details</h3>
+    <p><strong>Destination:</strong> Aqua Explorers Getaway</p>
+    <p><strong>Duration:</strong> 4 Days</p>
+    <p><strong>Difficulty:</strong> Intermediate</p>
+    <p class="trip-cost-4"><strong>Price:</strong> R19,200</p>
+    <p><strong>Description:</strong> Become an aqua explorer and journey through a variety of underwater landscapes. From serene kelp forests to dramatic underwater caves, each dive offers a new world to discover. Experience the thrill of exploration as you uncover the diversity and beauty of aquatic environments.</p>
+</div>
+</div>
+
+
+<!-- Trip Card 5 -->
+<div class="trip" data-trip-id="5" data-city="Sydney" data-trip-code="TRP005">
+  <!-- Trip Images (Clickable) -->
+  <div class="trip-images">
+    <img src="assets/question.png" alt="Icon 5" class="weather-button" data-trip-id="5">
+  </div>
+
+  <!-- Trip Content -->
+  <div class="trip-content">
+    <img src="assets/trip 5.jpg" alt="Trip Image 5">
+    <h2>Mysteries of the Deep</h2>
+  </div>
+
+  <!-- Trip Overlay -->
+  <div class="trip-overlay">
+    <button class="purchase-button" data-trip-id="5">Purchase Ticket</button>
+    <label for="ticket-quantity-5">Tickets:</label>
+    <select id="ticket-quantity-5" class="ticket-quantity" data-trip-id="5">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+  </div>
+
+  <!-- Weather Popup -->
+  <div id="weather-container-5" class="weather-container">
+    <h3>Weather Information</h3>
+    <div id="weather-info-5"></div>
+</div>
+
+  <button class="accordion-button" data-trip-id="5">Trip Details</button>
+  <!-- Trip Details HTML -->
+
+  <div id="trip-details-5" class="trip-details">
+    <h3>Trip Details</h3>
+    <p><strong>Destination:</strong> Mysteries of the Deep</p>
+    <p><strong>Duration:</strong> 5 Days</p>
+    <p><strong>Difficulty:</strong> Advanced</p>
+    <p class="trip-cost-5"><strong>Price:</strong> R21,600</p>
+    <p><strong>Description:</strong> Delve into the mysteries that lie beneath the surface as you explore the deep waters. Descend into the unknown and uncover hidden secrets within the shadows. Encounter mesmerizing bioluminescent organisms and marvel at the otherworldly sights that can only be found in the depths.</p>
+</div>
+</div>
+
+
+<!-- Trip Card 6 -->
+<div class="trip" data-trip-id="6" data-city="Cancun" data-trip-code="TRP006">
+  <!-- Trip Images (Clickable) -->
+  <div class="trip-images">
+    <img src="assets/question.png" alt="Icon 6" class="weather-button" data-trip-id="6">
+  </div>
+
+  <!-- Trip Content -->
+  <div class="trip-content">
+    <img src="assets/trip 6.jpg" alt="Trip Image 6">
+    <h2>Marine Wildlife Safari</h2>
+  </div>
+
+  <!-- Trip Overlay -->
+  <div class="trip-overlay">
+    <button class="purchase-button" data-trip-id="6">Purchase Ticket</button>
+    <label for="ticket-quantity-6">Tickets:</label>
+    <select id="ticket-quantity-6" class="ticket-quantity" data-trip-id="6">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+  </div>
+
+  <!-- Weather Popup -->
+  <div id="weather-container-6" class="weather-container">
+    <h3>Weather Information</h3>
+    <div id="weather-info-6"></div>
+</div>
+
+  <button class="accordion-button" data-trip-id="6">Trip Details</button>
+  <!-- Trip Details HTML -->
+
+  <div id="trip-details-6" class="trip-details">
+    <h3>Trip Details</h3>
+    <p><strong>Destination:</strong> Marine Wildlife Safari</p>
+    <p><strong>Duration:</strong> 7 Days</p>
+    <p><strong>Difficulty:</strong> Intermediate</p>
+    <p class="trip-cost-6"><strong>Price:</strong> R27,000</p>
+    <p><strong>Description:</strong> Embark on a wildlife safari like no other, where your encounters are with inhabitants of the deep blue. Observe majestic whales in their natural habitat, swim alongside playful dolphins, and witness the grandeur of graceful sharks. This safari offers a unique opportunity to connect with some of the ocean's most magnificent creatures.</p>  
+</div>
+</div>
+
+
+<!-- Trip Card 7 -->
+<div class="trip" data-trip-id="7" data-city="Phuket" data-trip-code="TRP007">
+  <!-- Trip Images (Clickable) -->
+  <div class="trip-images">
+    <img src="assets/question.png" alt="Icon 7" class="weather-button" data-trip-id="7">
+  </div>
+
+  <!-- Trip Content -->
+  <div class="trip-content">
+    <img src="assets/trip 7.jpg" alt="Trip Image 7">
+    <h2>Underwater Photography Expedition</h2>
+  </div>
+
+  <!-- Trip Overlay -->
+  <div class="trip-overlay">
+    <button class="purchase-button" data-trip-id="7">Purchase Ticket</button>
+    <label for="ticket-quantity-7">Tickets:</label>
+    <select id="ticket-quantity-7" class="ticket-quantity" data-trip-id="7">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+  </div>
+
+  <!-- Weather Popup -->
+  <div id="weather-container-7" class="weather-container">
+    <h3>Weather Information</h3>
+    <div id="weather-info-7"></div>
+</div>
+
+  <button class="accordion-button" data-trip-id="7">Trip Details</button>
+  <!-- Trip Details HTML -->
+
+  <div id="trip-details-7" class="trip-details">
+    <h3>Trip Details</h3>
+    <p><strong>Destination:</strong> Underwater Photography Expedition</p>
+    <p><strong>Duration:</strong> 6 Days</p>
+    <p><strong>Difficulty:</strong> Beginner</p>
+    <p class="trip-cost-7"><strong>Price:</strong> R25,200</p>
+    <p><strong>Description:</strong> Capture the beauty of the underwater world through the lens of your camera. Join our underwater photography expedition to hone your skills and create stunning images of marine life. Learn from experienced photographers as you explore vibrant coral reefs and fascinating aquatic creatures.</p>
+</div>
+</div>
+
+<!-- Trip Card 8 -->
+<div class="trip" data-trip-id="8" data-city="Santorini" data-trip-code="TRP008">
+  <!-- Trip Images (Clickable) -->
+  <div class="trip-images">
+    <img src="assets/question.png" alt="Icon 8" class="weather-button" data-trip-id="8">
+  </div>
+
+  <!-- Trip Content -->
+  <div class="trip-content">
+    <img src="assets/trip 8.jpg" alt="Trip Image 8">
+    <h2>Lost Civilization Expedition</h2>
+  </div>
+
+  <!-- Trip Overlay -->
+  <div class="trip-overlay">
+    <button class="purchase-button" data-trip-id="8">Purchase Ticket</button>
+    <label for="ticket-quantity-8">Tickets:</label>
+    <select id="ticket-quantity-8" class="ticket-quantity" data-trip-id="8">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+  </div>
+
+  <!-- Weather Popup -->
+  <div id="weather-container-8" class="weather-container">
+    <h3>Weather Information</h3>
+    <div id="weather-info-8"></div>
+</div>
+
+  <button class="accordion-button" data-trip-id="8">Trip Details</button>
+  <!-- Trip Details HTML -->
+
+  <div id="trip-details-8" class="trip-details">
+    <h3>Trip Details</h3>
+    <p><strong>Destination:</strong> Lost Civilization Expedition</p>
+        <p><strong>Duration:</strong> 5 Days</p>
+        <p><strong>Difficulty:</strong> Advanced</p>
+        <p class="trip-cost-8"><strong>Price:</strong> R21,600</p>
+        <p><strong>Description:</strong> Dive into history as you explore the remains of a lost civilization beneath the ocean's surface. Witness ancient artifacts and structures hidden in the depths. Join our expedition to unravel the mysteries of this underwater archaeological site, where history and adventure converge.</p>  
+</div>
+</div>
+
+<!-- Trip Card 9 -->
+<div class="trip" data-trip-id="9" data-city="Fiji" data-trip-code="TRP009">
+  <!-- Trip Images (Clickable) -->
+  <div class="trip-images">
+    <img src="assets/question.png" alt="Icon 9" class="weather-button" data-trip-id="9">
+  </div>
+
+  <!-- Trip Content -->
+  <div class="trip-content">
+    <img src="assets/trip 9.jpg" alt="Trip Image 9">
+    <h2>Island Hopping Adventure</h2>
+  </div>
+
+  <!-- Trip Overlay -->
+  <div class="trip-overlay">
+    <button class="purchase-button" data-trip-id="9">Purchase Ticket</button>
+    <label for="ticket-quantity-9">Tickets:</label>
+    <select id="ticket-quantity-9" class="ticket-quantity" data-trip-id="9">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+  </div>
+
+  <!-- Weather Popup -->
+  <div id="weather-container-9" class="weather-container">
+    <h3>Weather Information</h3>
+    <div id="weather-info-9"></div>
+</div>
+
+  <button class="accordion-button" data-trip-id="9">Trip Details</button>
+  <!-- Trip Details HTML -->
+
+  <div id="trip-details-9" class="trip-details">
+    <h3>Trip Details</h3>
+    <p><strong>Destination:</strong> Island Hopping Adventure</p>
+    <p><strong>Duration:</strong> 8 Days</p>
+    <p><strong>Difficulty:</strong> Intermediate</p>
+    <p class="trip-cost-9"><strong>Price:</strong> R32,400</p>
+    <p><strong>Description:</strong> Embark on a journey to explore multiple islands and their underwater treasures. Dive into the rich biodiversity of each location, from vibrant coral gardens to bustling fish colonies. This island-hopping adventure offers a diverse range of marine experiences for every scuba diving enthusiast.</p>    
+</div>
+</div>
+
+<!-- Trip Card 10 -->
+<div class="trip" data-trip-id="10" data-city="Rio de Janeiro" data-trip-code="TRP010">
+  <!-- Trip Images (Clickable) -->
+  <div class="trip-images">
+    <img src="assets/question.png" alt="Icon 10" class="weather-button" data-trip-id="10">
+  </div>
+
+  <!-- Trip Content -->
+  <div class="trip-content">
+    <img src="assets/trip 10.jpg" alt="Trip Image 10">
+    <h2>Deep Ocean Exploration</h2>
+  </div>
+
+  <!-- Trip Overlay -->
+  <div class="trip-overlay">
+    <button class="purchase-button" data-trip-id="10">Purchase Ticket</button>
+    <label for="ticket-quantity-10">Tickets:</label>
+    <select id="ticket-quantity-10" class="ticket-quantity" data-trip-id="10">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+  </div>
+
+  <!-- Weather Popup -->
+  <div id="weather-container-10" class="weather-container">
+    <h3>Weather Information</h3>
+    <div id="weather-info-10"></div>
+</div>
+
+  <button class="accordion-button" data-trip-id="10">Trip Details</button>
+  <!-- Trip Details HTML -->
+
+  <div id="trip-details-10" class="trip-details">
+    <h3>Trip Details</h3>
+    <p><strong>Destination:</strong> Deep Ocean Exploration</p>
+    <p><strong>Duration:</strong> 7 Days</p>
+    <p><strong>Difficulty:</strong> Advanced</p>
+    <p class="trip-cost-10"><strong>Price:</strong> R27,000</p>
+    <p><strong>Description:</strong> Descend to the deepest realms of the ocean and explore the mysteries that lie beneath the crushing pressure of the abyss. Witness unique and rarely seen creatures that thrive in extreme conditions. Join our expedition for an unforgettable journey to the unknown depths.</p>
+</div>
+</div>
+
+
+<!-- Trip Card 11 -->
+<div class="trip" data-trip-id="11" data-city="Cape Town" data-trip-code="TRP011">
+  <!-- Trip Images (Clickable) -->
+  <div class="trip-images">
+    <img src="assets/question.png" alt="Icon 11" class="weather-button" data-trip-id="11">
+  </div>
+
+  <!-- Trip Content -->
+  <div class="trip-content">
+    <img src="assets/trip 11.jpg" alt="Trip Image 11">
+    <h2>Underwater Volcano Expedition</h2>
+  </div>
+
+  <!-- Trip Overlay -->
+  <div class="trip-overlay">
+    <button class="purchase-button" data-trip-id="11">Purchase Ticket</button>
+    <label for="ticket-quantity-11">Tickets:</label>
+    <select id="ticket-quantity-11" class="ticket-quantity" data-trip-id="11">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+  </div>
+
+  <!-- Weather Popup -->
+  <div id="weather-container-11" class="weather-container">
+    <h3>Weather Information</h3>
+    <div id="weather-info-11"></div>
+</div>
+  <button class="accordion-button" data-trip-id="11">Trip Details</button>
+
+  <!-- Trip Details HTML -->
+
+  <div id="trip-details-11" class="trip-details">
+    <h3>Trip Details</h3>
+    <p><strong>Destination:</strong> Underwater Volcano Expedition</p>
+    <p><strong>Duration:</strong> 6 Days</p>
+    <p><strong>Difficulty:</strong> Advanced</p>
+    <p class="trip-cost-11"><strong>Price:</strong> R25,200</p>
+    <p><strong>Description:</strong> Embark on a thrilling adventure to explore underwater volcanoes. Witness the raw power of the Earth as you dive into the heart of volcanic activity. Discover unique ecosystems that thrive in this extreme environment and capture the awe-inspiring beauty of this natural phenomenon.</p>
+</div>
+</div>
+
+<!-- Trip Card 12 -->
+<div class="trip" data-trip-id="12" data-city="Venice" data-trip-code="TRP012">
+  <!-- Trip Images (Clickable) -->
+  <div class="trip-images">
+    <img src="assets/question.png" alt="Icon 12" class="weather-button" data-trip-id="12">
+  </div>
+
+  <!-- Trip Content -->
+  <div class="trip-content">
+    <img src="assets/trip 12.jpg" alt="Trip Image 12">
+    <h2>Arctic Ice Diving</h2>
+  </div>
+
+  <!-- Trip Overlay -->
+  <div class="trip-overlay">
+    <button class="purchase-button" data-trip-id="12">Purchase Ticket</button>
+    <label for="ticket-quantity-12">Tickets:</label>
+    <select id="ticket-quantity-12" class="ticket-quantity" data-trip-id="12">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+  </div>
+
+  <!-- Weather Popup -->
+  <div id="weather-container-12" class="weather-container">
+    <h3>Weather Information</h3>
+    <div id="weather-info-12"></div>
+</div>
   
+  <button class="accordion-button" data-trip-id="12">Trip Details</button>
+  <!-- Trip Details HTML -->
 
-  <div class="trip-container">
-    <div class="trip" data-trip-id="1" onclick="addToCheckout(this)">
-      <div class="trip-content">
-        <img src="assets/trip 1.jpg" alt="Trip Image 1">
-        <h2>Caribbean Coral Expedition:</h2>
-        <p>Dive into the vibrant and colorful world of the Caribbean's coral reefs. Embark on an expedition where you'll encounter a dazzling array of marine life, from playful tropical fish to majestic sea turtles. Explore hidden coves and swim alongside the coral formations that make this region a scuba diver's paradise.</p>
-      </div>
-      <div class="trip-overlay">
-        <span><strong>Add to Checkout</strong></span>
-      </div>
-      <div class="trip-images">
-        <img src="assets/question.png" alt="Icon 1">
-      </div>
-    </div>
-    
-    <div class="trip" data-trip-id="2" onclick="addToCheckout(this)">
-      <div class="trip-content">
-        <img src="assets/trip 2.jpg" alt="Trip Image 2">
-        <h2>Tropical Paradise Dive:</h2>
-        <p>Immerse yourself in the tranquil waters of a tropical paradise. Drift through crystal-clear seas and gaze upon breathtaking underwater landscapes. Discover unique species that call this paradise home, from graceful manta rays to intriguing octopuses. Experience the magic of diving in a setting straight out of a dream.</p>
-      </div>
-      <div class="trip-overlay">
-        <span><strong>Add to Checkout</strong></span>
-      </div>
-      <div class="trip-images">
-        <img src="assets/question.png" alt="Icon 1">
-      </div>
-    </div>
+  <div id="trip-details-12" class="trip-details">
+    <h3>Trip Details</h3>
+    <p><strong>Destination:</strong> Arctic Ice Diving</p>
+        <p><strong>Duration:</strong> 7 Days</p>
+        <p><strong>Difficulty:</strong> Intermediate</p>
+        <p class="trip-cost-12"><strong>Price:</strong> R27,000</p>
+        <p><strong>Description:</strong> Experience the thrill of diving beneath the Arctic ice. Explore the icy depths of polar waters and encounter the unique and hardy marine life that thrives in this extreme environment. This expedition offers a once-in-a-lifetime opportunity to dive into the world's coldest and most pristine oceans.</p>  
+</div>
+</div>
 
-    <div class="trip" data-trip-id="3" onclick="addToCheckout(this)">
-      <div class="trip-content">
-        <img src="assets/trip 3.jpg" alt="Trip Image 3">
-        <h2>Sunken Shipwrecks Adventure:</h2>
-        <p>Embark on an adventure to explore sunken shipwrecks that tell tales of maritime history. Navigate through the remains of vessels from bygone eras, now teeming with marine life. Witness the symbiotic relationship between nature and history as you dive into the heart of these captivating underwater time capsules.</p>
-      </div>
-      <div class="trip-overlay">
-        <span><strong>Add to Checkout</strong></span>
-      </div>
-      <div class="trip-images">
-        <img src="assets/question.png" alt="Icon 1">
-      </div>
-    </div>
+   
+ </div>  <!--end if trip container-->
 
-    <div class="trip" data-trip-id="4" onclick="addToCheckout(this)">
-      <div class="trip-content">
-        <img src="assets/trip 4.jpg" alt="Trip Image 4">
-        <h2>Aqua Explorers Getaway:</h2>
-        <p>Become an aqua explorer and journey through a variety of underwater landscapes. From serene kelp forests to dramatic underwater caves, each dive offers a new world to discover. Experience the thrill of exploration as you uncover the diversity and beauty of aquatic environments.</p>
-      </div>
-      <div class="trip-overlay">
-        <span><strong>Add to Checkout</strong></span>
-      </div>
-      <div class="trip-images">
-        <img src="assets/question.png" alt="Icon 1">
-      </div>
-    </div>
 
-    <div class="trip" data-trip-id="5" onclick="addToCheckout(this)">
-      <div class="trip-content">
-        <img src="assets/trip 5.jpg" alt="Trip Image 5">
-        <h2>Mysteries of the Deep:</h2>
-        <p>Delve into the mysteries that lie beneath the surface as you explore the deep waters. Descend into the unknown and uncover hidden secrets within the shadows. Encounter mesmerizing bioluminescent organisms and marvel at the otherworldly sights that can only be found in the depths</p>
-      </div>
-      <div class="trip-overlay">
-        <span><strong>Add to Checkout</strong></span>
-      </div>
-      <div class="trip-images">
-        <img src="assets/question.png" alt="Icon 1">
-      </div>
-    </div>
-
-    <div class="trip" data-trip-id="6" onclick="addToCheckout(this)">
-      <div class="trip-content">
-        <img src="assets/trip 6.jpg" alt="Trip Image  6">
-        <h2>Marine Wildlife Safari:</h2>
-        <p>Embark on a wildlife safari like no other, where your encounters are with inhabitants of the deep blue. Observe majestic whales in their natural habitat, swim alongside playful dolphins, and witness the grandeur of graceful sharks. This safari offers a unique opportunity to connect with some of the ocean's most magnificent creatures.</p>
-      </div>
-      <div class="trip-overlay">
-        <span><strong>Add to Checkout</strong></span>
-      </div>
-      <div class="trip-images">
-        <img src="assets/question.png" alt="Icon 1">
-      </div>
-    </div>
-
-    <div class="trip" data-trip-id="7" onclick="addToCheckout(this)">
-      <div class="trip-content">
-        <img src="assets/trip 7.jpg" alt="Trip Image 7">
-        <h2>Deep Sea Exploration:</h2>
-      <p>Dive into the mysteries of the deep sea on an extraordinary underwater expedition. Explore the abyssal depths and witness the unique and bizarre creatures that inhabit this remote and fascinating environment. Discover bioluminescent wonders, encounter extraordinary deep-sea species, and unravel the secrets of the ocean's most enigmatic realm.</p>
-    </div>
-      <div class="trip-overlay">
-        <span><strong>Add to Checkout</strong></span>
-      </div>
-      <div class="trip-images">
-        <img src="assets/question.png" alt="Icon 1">
-      </div>
-    </div>
-    
-    <div class="trip" data-trip-id="8" onclick="addToCheckout(this)">
-      <div class="trip-content">
-        <img src="assets/trip 8.jpg" alt="Trip Image 8">
-        <h2>Cave Diving Adventure:</h2>
-        <p>Embark on an exhilarating adventure into the heart of underwater caves and caverns. Navigate through intricate passageways adorned with stunning geological formations. Encounter unique aquatic life that thrives in these hidden realms and experience the thrill of exploration as you uncover the secrets of the underworld's most captivating and enigmatic landscapes.</p>
-      </div>
-      <div class="trip-overlay">
-        <span><strong>Add to Checkout</strong></span>
-      </div>
-      <div class="trip-images">
-        <img src="assets/question.png" alt="Icon 1">
-      </div>
-    </div>
-
-    <div class="trip" data-trip-id="9" onclick="addToCheckout(this)">
-      <div class="trip-content">
-        <img src="assets/trip 9.jpg" alt="Trip Image 9">
-        <h2>Reef Dives Exploration:</h2>
-      <p>Embark on a series of exciting reef dives and explore the vibrant and diverse ecosystems of coral reefs. Immerse yourself in a world of colors as you encounter a variety of marine species and witness the intricate beauty of coral formations. Learn about the importance of reef conservation while experiencing the wonders of these underwater oases.</p>
-    </div>
-      <div class="trip-overlay">
-        <span><strong>Add to Checkout</strong></span>
-      </div>
-      <div class="trip-images">
-        <img src="assets/question.png" alt="Icon 1">
-      </div>
-    </div>
-
-    <div class="trip" data-trip-id="10" onclick="addToCheckout(this)">
-      <div class="trip-content">
-        <img src="assets/trip 10.jpg" alt="Trip Image 10">
-        <h2>Ruin Dive Expedition:</h2>
-      <p>Embark on a unique underwater adventure as you explore ancient underwater ruins. Dive into history and uncover the remnants of ancient civilizations that now lie beneath the waves. Discover artifacts, sculptures, and architectural marvels that provide insights into the past while experiencing the thrill of exploration in this submerged archaeological wonderland.</p>
-    </div>
-      <div class="trip-overlay">
-        <span><strong>Add to Checkout</strong></span>
-      </div>
-      <div class="trip-images">
-        <img src="assets/question.png" alt="Icon 1">
-      </div>
-    </div>
-
-    <div class="trip" data-trip-id="11" onclick="addToCheckout(this)">
-      <div class="trip-content">
-        <img src="assets/trip 11.jpg" alt="Trip Image 11">
-        <h2>Manta and Sting Ray Dive:</h2>
-      <p>Encounter the graceful manta rays and elegant stingrays in their natural habitat on this mesmerizing dive experience. Dive into the crystal-clear waters and witness these gentle giants glide effortlessly through the ocean. Get up close to these magnificent creatures and witness their majestic underwater ballet that will leave you in awe.</p>
+    <footer class="footer">
+        <div class="footer-images">
+            <img src="assets/footer-iamge1.png" alt="Footer Image 1">
+            <img src="assets/footer-iamge2.png" alt="Footer Image 2">
+            <img src="assets/footer-iamge3.png" alt="Footer Image 3">
         </div>
-      <div class="trip-overlay">
-        <span><strong>Add to Checkout</strong></span>
-      </div>
-      <div class="trip-images">
-        <img src="assets/question.png" alt="Icon 1">
-      </div>
-    </div>
-
-    <div class="trip" data-trip-id="12" onclick="addToCheckout(this)">
-      <div class="trip-content">
-        <img src="assets/trip 12.jpg" alt="Trip Image  12">
-        <h2>Whale Dive Expedition:</h2>
-      <p>Embark on a thrilling journey to dive alongside some of the ocean's most magnificent and awe-inspiring creatures—whales. Dive into the depths and witness the grandeur of these gentle giants as they navigate through their marine realm. Experience the magic of connecting with these intelligent and majestic marine mammals in an unforgettable underwater encounter.</p>
-    </div>
-      <div class="trip-overlay">
-        <span><strong>Add to Checkout</strong></span>
-      </div>
-      <div class="trip-images">
-        <img src="assets/question.png" alt="Icon 1">
-      </div>
-    </div>
-    
-  </div>
-
-
-  <footer class="footer">
-    <div class="footer-images">
-      <img src="assets/footer-iamge1.png" alt="Footer Image 1">
-      <img src="assets/footer-iamge2.png" alt="Footer Image 2">
-      <img src="assets/footer-iamge3.png" alt="Footer Image 3">
-    </div>
-    <div class="footer-text">Copyright © 2023 AquaticNautica</div>
-    <div class="footer-images">
-      <img src="assets/footer-iamge4.png" alt="Footer Image 4">
-      <img src="assets/footer-iamge5.png" alt="Footer Image 5">
-      <img src="assets/footer-iamge6.png" alt="Footer Image 6">
-    </div>
-  </footer>
+        <div class="footer-text">Copyright © 2023 AquaticNautica</div>
+        <div class="footer-images">
+            <img src="assets/footer-iamge4.png" alt="Footer Image 4">
+            <img src="assets/footer-iamge5.png" alt="Footer Image 5">
+            <img src="assets/footer-iamge6.png" alt="Footer Image 6">
+        </div>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/trips.js"></script>
+    <script src="js/trips.js" defer></script>
 
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          
+
+          // Handle click on accordion button to toggle trip details
+          $(".accordion-button").click(function () {
+              var tripId = $(this).data("trip-id");
+              var tripDetails = $("#trip-details-" + tripId);
+
+              // Toggle trip details visibility
+              tripDetails.slideToggle();
+          });
+      });
+  </script>
 
 </body>
 </html>
